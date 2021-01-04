@@ -1,0 +1,1 @@
+select *, count(*)  from (select t.dtc_id,d.DTC_SHORT ,e.ENTITLE_DESC from test as t, dtc as d, entitle as e where e.ENTITLE_CODE=t.ENTITLE and d.DTC_ID=t.DTC_ID and t.APP_DT_TIME>='2021-01-04') as i group by dtc_id , DTC_SHORT, ENTITLE_DESC order by DTC_ID
